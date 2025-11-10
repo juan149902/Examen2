@@ -1,0 +1,184 @@
+/* =========================================================
+   DISEÑO PROFESIONAL EN BLANCO Y NEGRO - PREDICCIÓN IA
+   Autor: Juan Antonio Ávalos García
+   ========================================================= */
+
+/* Fuente moderna y base */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: #111;
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow-x: hidden;
+}
+
+/* Contenedor principal */
+.container {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 20px;
+  padding: 2.5rem 3rem;
+  width: 90%;
+  max-width: 700px;
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(14px);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+.container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 45px rgba(255, 255, 255, 0.15);
+}
+
+/* Título */
+h1 {
+  text-align: center;
+  font-size: 2rem;
+  letter-spacing: 1px;
+  margin-bottom: 1.8rem;
+  background: linear-gradient(to right, #fff, #aaa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Formulario */
+form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.2rem 1.5rem;
+  width: 100%;
+}
+
+label {
+  font-weight: 500;
+  font-size: 0.95rem;
+  color: #ddd;
+  display: block;
+  margin-bottom: 0.3rem;
+}
+
+/* Inputs y selects */
+input, select {
+  width: 100%;
+  padding: 0.7rem 1rem;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  appearance: none;
+}
+
+/* Color visible al abrir el menú de opciones */
+select option {
+  background: #000;
+  color: #fff;
+}
+
+/* Hover y focus */
+input:hover, select:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+input:focus, select:focus {
+  outline: none;
+  border-color: #fff;
+  background: rgba(255, 255, 255, 0.12);
+}
+
+/* Botón */
+button {
+  grid-column: span 2;
+  padding: 0.9rem;
+  background: linear-gradient(90deg, #fff, #444);
+  border: none;
+  border-radius: 12px;
+  color: #000;
+  font-weight: 600;
+  letter-spacing: 0.8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+button:hover {
+  transform: scale(1.05);
+  background: linear-gradient(90deg, #000, #fff);
+  color: #fff;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+}
+
+/* Resultado */
+.result {
+  margin-top: 2.2rem;
+  text-align: center;
+  animation: fadeInUp 1.2s ease-in-out;
+}
+
+.result h2 {
+  font-size: 1.6rem;
+  color: #fff;
+  margin-bottom: 0.6rem;
+}
+
+.result p {
+  font-size: 1rem;
+  color: #ccc;
+}
+
+/* Factores de riesgo */
+.risk-list {
+  list-style: none;
+  margin-top: 1.2rem;
+  text-align: left;
+  padding: 0;
+  color: #aaa;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 1rem;
+}
+
+.risk-list li::before {
+  content: "⚡ ";
+  color: #fff;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsividad */
+@media (max-width: 600px) {
+  form {
+    grid-template-columns: 1fr;
+  }
+
+  button {
+    grid-column: span 1;
+  }
+
+  .container {
+    padding: 2rem 1.5rem;
+  }
+}
